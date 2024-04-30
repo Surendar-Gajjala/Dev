@@ -24,4 +24,10 @@ public class StudentController {
         studentService.saveStudent(student);
         return "Student saved successfully";
     }
+
+    @PostMapping("/getStudent/{id}")
+    public Student saveStudent(@PathVariable("id") int id){
+        //studentService.saveStudent(student);
+        return null;
+    }
 }
