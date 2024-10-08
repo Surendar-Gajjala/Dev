@@ -19,7 +19,7 @@ pipeline {
         stage('Build') {
             steps {
                 bat 'echo "Building the project..."'
-                bat "${MAVEN_HOME}/bin/mvn clean compile"
+                bat "${MAVEN_HOME}\\bin\\mvn clean compile"
             }
         }
 
