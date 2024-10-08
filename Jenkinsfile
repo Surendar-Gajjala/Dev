@@ -3,8 +3,8 @@ pipeline {
 
      environment {
         // Set up environment variables if needed (e.g., JAVA_HOME, MAVEN_HOME)
-        MAVEN_HOME = 'C:/Program Files/apache-maven-3.9.7' // Adjust the path to your Maven installation
-        JAVA_HOME = 'C:/Program Files/OpenLogic/jdk-17.0.10.7-hotspot' // Adjust the path to your JDK
+        MAVEN_HOME = 'C:\Program Files\apache-maven-3.9.7' // Adjust the path to your Maven installation
+        JAVA_HOME = 'C:\Program Files\OpenLogic\jdk-17.0.10.7-hotspot' // Adjust the path to your JDK
         PATH = "${MAVEN_HOME}/bin;${JAVA_HOME}/bin;${env.PATH}"
     }
     
