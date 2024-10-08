@@ -1,1 +1,40 @@
+pipeline {
+    agent any
 
+    environment {
+        // Define any environment variables here
+        // Example: MY_ENV_VAR = 'value'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Fetch code from version control
+                git branch: 'main', url: 'https://github.com/Surendar-Gajjala/Dev.git'
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                // Build the project (e.g., using Maven, Gradle, npm, etc.)
+                sh 'echo "Building the project..."'
+                // Example: sh 'mvn clean install'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                // Run the tests
+                sh 'echo "Running tests..."'
+                // Example: sh 'mvn test'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                // Deploy the application
+                sh 'echo "Deploying the application..."'
+                // Example: sh './deploy.sh'
+            }
+        }
+    }
