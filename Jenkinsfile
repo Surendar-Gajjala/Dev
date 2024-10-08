@@ -11,9 +11,9 @@ pipeline {
         
         stage('Build') {
             steps {
-                // Build the project (e.g., using Maven, Gradle, npm, etc.)
                 sh 'echo "Building the project..."'
-                // Example: sh 'mvn clean install'
+                sh 'mvn clean install -DskipTests'
+                sh 'mvn generate-sources'
             }
         }
 
